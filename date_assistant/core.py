@@ -40,3 +40,21 @@ class DateAssistant:
 
     def months_started_until(self, date_to_compare: str) -> int:
         return self.months_started_since(date_to_compare)
+
+    def add_years(self, num_years: int) -> str:
+        self._date += relativedelta(years=num_years)
+        self.date = self._date.strftime('%Y-%m-%d')
+        return self.date
+
+    def years_diff_with(self, date_to_compare: str) -> int:
+        date_to_compare = datetime.strptime(date_to_compare, '%Y-%m-%d')
+        diff = relativedelta(self._date, date_to_compare)
+        return abs(diff.years)
+
+    def years_started_since(self, date_to_compare: str) -> int:
+        date_to_compare = datetime.strptime(date_to_compare, '%Y-%m-%d')
+        years_diff = self._date.year - date_to_compare.year
+        return abs(years_diff)
+
+    def years_started_until(self, date_to_compare: str) -> int:
+        return self.years_started_since(date_to_compare)

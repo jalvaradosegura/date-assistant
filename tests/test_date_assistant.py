@@ -100,3 +100,53 @@ def test_months_started_since_and_until(
 
     assert response_since == expected_result
     assert response_until == expected_result
+
+
+@pytest.mark.parametrize(
+    'years_to_add, expected_result',
+    [
+        (0, '2021-01-01'),
+        (1, '2022-01-01'),
+        (-2, '2019-01-01'),
+        (12, '2033-01-01'),
+        (-12, '2009-01-01'),
+    ],
+)
+def test_add_years(example_date, years_to_add, expected_result):
+    response = example_date.add_years(years_to_add)
+    assert response == expected_result
+
+
+@pytest.mark.parametrize(
+    'date_to_compare, expected_result',
+    [
+        ('2021-12-31', 0),
+        ('2020-12-01', 0),
+        ('2021-11-11', 0),
+        ('2020-01-01', 1),
+        ('2022-04-20', 1),
+    ],
+)
+def test_years_diff_with(example_date, date_to_compare, expected_result):
+    response = example_date.years_diff_with(date_to_compare)
+    assert response == expected_result
+
+
+@pytest.mark.parametrize(
+    'date_to_compare, expected_result',
+    [
+        ('2020-11-01', 1),
+        ('2020-12-11', 1),
+        ('2016-11-11', 5),
+        ('2021-12-31', 0),
+        ('2021-04-20', 0),
+        ('2025-04-01', 4),
+        ('2030-06-01', 9),
+    ],
+)
+def test_years_started_since(example_date, date_to_compare, expected_result):
+    response_since = example_date.years_started_since(date_to_compare)
+    response_until = example_date.years_started_until(date_to_compare)
+
+    assert response_since == expected_result
+    assert response_until == expected_result
