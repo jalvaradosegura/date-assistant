@@ -13,17 +13,18 @@ my_birthday_2021.days_diff_with(date_assistant_birthday)
 # 36
 my_birthday_2021.months_diff_with(date_assistant_birthday)
 # 1
-
+my_birthday_2021.years_diff_with(date_assistant_birthday)
+# 0
 ```
 
 ### Get the amount of years or months started since or until some date
 ```py
 from date_assistant import DateAssistant
 
-date_assistant_birthday = '2021-08-18'
 last_day_of_2021 = DateAssistant('2021-12-31')
 first_day_of_2022 = '2022-01-01'
 first_day_of_2023 = '2023-01-01'
+date_assistant_birthday = '2021-08-18'
 
 last_day_of_2021.years_started_until(first_day_of_2022)
 # 1
