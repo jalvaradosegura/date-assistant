@@ -22,3 +22,21 @@ class DateAssistant:
     def days_diff_with(self, date_to_compare: str) -> int:
         date_to_compare = datetime.strptime(date_to_compare, '%Y-%m-%d')
         return abs(self._date - date_to_compare).days
+
+    def add_months(self, num_months: int) -> str:
+        self._date += relativedelta(months=num_months)
+        self.date = self._date.strftime('%Y-%m-%d')
+        return self.date
+
+    def months_diff_with(self, date_to_compare: str) -> int:
+        date_to_compare = datetime.strptime(date_to_compare, '%Y-%m-%d')
+        diff = relativedelta(self._date, date_to_compare)
+        return abs(diff.months + (12 * diff.years))
+
+    def months_started_since(self, date_to_compare: str) -> int:
+        date_to_compare = datetime.strptime(date_to_compare, '%Y-%m-%d')
+        months_diff = self._date.month - date_to_compare.month
+        return abs((self._date.year - date_to_compare.year) * 12 + months_diff)
+
+    def months_started_until(self, date_to_compare: str) -> int:
+        return self.months_started_since(date_to_compare)
