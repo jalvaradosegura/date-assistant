@@ -1,8 +1,12 @@
 [tool.poetry]
 name = "date_assistant"
-version = "0.5.1"
+version = "0.5.2"
 description = ""
 authors = ["Jorge Alvarado <alvaradosegurajorge@gmail.com>"]
+readme = "README.md"
+license = "MIT"
+homepage = "https://github.com/jalvaradosegura/date_assistant"
+repository = "https://github.com/jalvaradosegura/date_assistant"
 
 [tool.poetry.dependencies]
 python = "^3.8"
