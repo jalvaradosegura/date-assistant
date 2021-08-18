@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "date_assistant"
-version = "0.5.2"
+version = "0.5.3"
 description = ""
 authors = ["Jorge Alvarado <alvaradosegurajorge@gmail.com>"]
 readme = "README.md"
