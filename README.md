@@ -1,3 +1,10 @@
+[![Coverage Status](https://coveralls.io/repos/github/jalvaradosegura/date_assistant/badge.svg?branch=main)](https://coveralls.io/github/jalvaradosegura/date_assistant?branch=main)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+[![Imports: isort](https://img.shields.io/badge/%20imports-isort-%231674b1?style=flat&labelColor=ef8336)](https://pycqa.github.io/isort/)
+[![basic-quality-check](https://github.com/jalvaradosegura/date_assistant/actions/workflows/code_quality.yml/badge.svg)](https://github.com/jalvaradosegura/date_assistant/actions/workflows/code_quality.yml)
+[![GitHub license](https://img.shields.io/github/license/jalvaradosegura/date_assistant)](https://github.com/jalvaradosegura/date_assistant/blob/main/LICENSE)
+[![Downloads](https://pepy.tech/badge/date-assistant)](https://pepy.tech/project/date-assistant)
+
 # Date Assistant
 
 ## Usage

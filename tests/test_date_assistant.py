@@ -4,7 +4,7 @@ from date_assistant import DateAssistant, __version__
 
 
 def test_version():
-    assert __version__ == '0.6.0'
+    assert __version__ == '0.6.2'
 
 
 @pytest.fixture
