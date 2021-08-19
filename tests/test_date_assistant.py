@@ -1,10 +1,10 @@
 import pytest
 
-from date_assistant import __version__, DateAssistant
+from date_assistant import DateAssistant, __version__
 
 
 def test_version():
-    assert __version__ == '0.1.0'
+    assert __version__ == '0.6.0'
 
 
 @pytest.fixture

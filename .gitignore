@@ -13,3 +13,6 @@ htmlcov/
 # Vim
 *.swp
 *.swo
+
+# coveralls
+.coveralls.yml
