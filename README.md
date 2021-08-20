@@ -7,6 +7,12 @@
 
 # Date Assistant
 
+## Installation
+date-assistant is published on [PyPI](https://pypi.org/project/date-assistant/) and can be installed from there:
+```
+pip install date-assistant
+```
+
 ## Usage
 
 ### Get the difference of days, months or years between 2 dates
