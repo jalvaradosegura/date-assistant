@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "date_assistant"
-version = "0.7.0"
+version = "0.7.1"
 description = "🗓 Classes and functions with intuitive names for common dates operations"
 authors = ["Jorge Alvarado <alvaradosegurajorge@gmail.com>"]
 readme = "README.md"
