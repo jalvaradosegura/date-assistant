@@ -14,8 +14,70 @@ pip install date-assistant
 ```
 
 ## Usage
+> 💡 Please consider that the default date format is '%Y-%m-%d'. Anyways, you can indicate the format of your date if you need to.
 
-### Get the difference of days, months or years between 2 dates
+### Functions approach
+
+#### Get the difference of days, months or years between 2 dates
+```py
+from date_assistant import (
+    get_days_diff_between,
+    get_months_diff_between,
+    get_years_diff_between,
+)
+from date_assistant.formats import DD_MM_YYYY, YYYY_MM
+
+
+get_days_diff_between('2021-01-01', '2021-01-11')
+# 10
+get_days_diff_between('2021-01-01', '21-01-2021', date2_format=DD_MM_YYYY)
+# 20
+
+get_months_diff_between('2021-01-01', '2022-01-11')
+# 12
+get_months_diff_between('2021-01-05', '2021-02-01')
+# 0
+get_months_diff_between('2021-01', '2021-02-21', date1_format=YYYY_MM)
+# 1
+
+get_years_diff_between('2021-01-01', '2022-01-11')
+# 1
+get_years_diff_between('2021-01-05', '2022-01-01')
+# 0
+get_years_diff_between('2021-01', '2023-01-01', date1_format=YYYY_MM)
+# 2
+```
+> 💡 See how months and years are only counted if a full year or month has passed.
+
+#### Get the amount of years or months started between 2 dates
+```py
+from date_assistant import (
+    get_months_started_between,
+    get_years_started_between,
+)
+from date_assistant.formats import YYYY_MM
+
+
+get_months_started_between('2021-01-05', '2021-02-01')
+# 1
+get_months_started_between('2021-01-01', '2022-01-11')
+# 12
+get_months_started_between('2021-01', '2021-02-21', date1_format=YYYY_MM)
+# 1
+
+get_years_started_between('2021-01-01', '2020-12-31')
+# 1
+get_years_started_between('2021-01-05', '2022-01-01')
+# 1
+get_years_started_between('2021-01', '2023-01-01', date1_format=YYYY_MM)
+# 2
+```
+
+> 💡 In contrast with the previous block example, here you don't need a full year or month between dates to count. If a new year or month started, it count.
+
+### Classes approach
+
+#### Get the difference of days, months or years between 2 dates
 ```py
 from date_assistant import DateAssistant
 
@@ -30,7 +92,7 @@ my_birthday_2021.years_diff_with(date_assistant_birthday)
 # 0
 ```
 
-### Get the amount of years or months started since or until some date
+#### Get the amount of years or months started since or until some date
 ```py
 from date_assistant import DateAssistant
 
