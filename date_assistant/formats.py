@@ -2,12 +2,12 @@
 # Who doesn't like christmas? :)
 
 # 2021-12-25
-YYYY_mm_dd = '%Y-%m-%d'
+YYYY_MM_DD = '%Y-%m-%d'
 # 25-12-2021
-dd_mm_YYYY = '%d-%m-%Y'
+DD_MM_YYYY = '%d-%m-%Y'
 # 12-25-2021
-mm_dd_YYYY = '%m-%d-%Y'
+MM_DD_YYYY = '%m-%d-%Y'
 # 12-2021
-mm_YYYY = '%m-%Y'
+MM_YYYY = '%m-%Y'
 # 2021-12
-YYYY_mm = '%Y-%m'
+YYYY_MM = '%Y-%m'
