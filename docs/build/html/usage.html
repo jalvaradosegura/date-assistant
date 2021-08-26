@@ -6,7 +6,7 @@
 <link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="Functions approach" href="functions_approach.html" /><link rel="prev" title="Installation" href="install.html" />
 
     <meta name="generator" content="sphinx-4.1.2, furo 2021.08.17.beta43"/>
-        <title>Usage - date-assistant 0.10.0 documentation</title>
+        <title>Usage - date-assistant 0.10.1 documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?digest=910ac4ccc9d7c023151c34010d7b500fb9777a51" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?digest=16fb25fabf47304eee183a5e9af80b1ba98259b1" />
@@ -121,7 +121,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="index.html"><div class="brand">date-assistant 0.10.0 documentation</div></a>
+      <a href="index.html"><div class="brand">date-assistant 0.10.1 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -132,7 +132,7 @@
           <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
         </button>
       </div>
-      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
         <div class="visually-hidden">Toggle table of contents sidebar</div>
         <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
       </label>
@@ -144,7 +144,7 @@
       <div class="sidebar-sticky"><a class="sidebar-brand" href="index.html">
   
   
-  <span class="sidebar-brand-text">date-assistant 0.10.0 documentation</span>
+  <span class="sidebar-brand-text">date-assistant 0.10.1 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="search.html" role="search">
   <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
@@ -156,6 +156,7 @@
 <li class="toctree-l1"><a class="reference internal" href="install.html">Installation</a></li>
 <li class="toctree-l1 current has-children current-page"><a class="current reference internal" href="#">Usage</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="functions_approach.html">Functions approach</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_approach.html">Class approach</a></li>
 </ul>
 </li>
 </ul>
@@ -178,16 +179,23 @@
               <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
             </button>
           </div>
-          <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
             <div class="visually-hidden">Toggle table of contents sidebar</div>
             <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
           </label>
         </div>
         <section id="usage">
 <h1>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h1>
+<p>Currently there are 2 approaches for using this package: the <a class="reference internal" href="functions_approach.html#functions-approach-label"><span class="std std-ref">Functions approach</span></a> and the <a class="reference internal" href="class_approach.html#class-approach-label"><span class="std std-ref">Class approach</span></a>.</p>
+<section id="when-to-use-each">
+<h2>When to use each?<a class="headerlink" href="#when-to-use-each" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="functions_approach.html#functions-approach-label"><span class="std std-ref">Functions approach</span></a>: When you are going to do a single operation with the same dates.</p></li>
+<li><p><a class="reference internal" href="class_approach.html#class-approach-label"><span class="std std-ref">Class approach</span></a>: When you are going to do multiple operations with the same dates.</p></li>
+</ul>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>💡 Please consider that the default date format is ‘%Y-%m-%d’. Anyways, you can indicate the format of your date if you need to.</p>
+<p>💡 Please consider that the default date format is <code class="code docutils literal notranslate"><span class="pre">'%Y-%m-%d'</span></code>, eg: <code class="code docutils literal notranslate"><span class="pre">'2021-12-25'</span></code>. Anyways, you can indicate the format of your date if you need to.</p>
 </div>
 <div class="toctree-wrapper compound">
 <ul>
@@ -219,8 +227,18 @@
 </li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="class_approach.html">Class approach</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="class_approach.html#get-the-difference-of-days-months-and-years-between-2-dates">Get the difference of days, months and years between 2 dates</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_approach.html#import-dateassistant">Import DateAssistant</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_approach.html#instantiate-the-class-and-define-another-date-as-string">Instantiate the class and define another date as string</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_approach.html#use-the-methods">Use the methods</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </div>
+</section>
 </section>
 
       </article>
@@ -265,8 +283,27 @@
         
       </footer>
     </div>
-    <aside class="toc-drawer no-toc">
+    <aside class="toc-drawer">
       
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            Contents
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">Usage</a><ul>
+<li><a class="reference internal" href="#when-to-use-each">When to use each?</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
       
       
     </aside>

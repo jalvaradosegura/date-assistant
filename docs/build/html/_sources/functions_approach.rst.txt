@@ -1,4 +1,5 @@
-##################
+.. _functions-approach-label:
+
 Functions approach
 ##################
 
@@ -37,8 +38,7 @@ Using the function is every easy. Just pass the dates you want use as parameters
    # 10
 
 .. note::
-   💡 Please consider that the default date format is '%Y-%m-%d'. Anyways, you can indicate the format of your date if you need to.
-
+   💡 Please consider that the default date format is :code:`'%Y-%m-%d'`, eg: :code:`'2021-12-25'`. Anyways, you can indicate the format of your date if you need to.
 
 ===============================
 Indicate the format of the date
