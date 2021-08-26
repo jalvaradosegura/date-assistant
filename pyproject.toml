@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "date_assistant"
-version = "0.9.1"
+version = "0.10.0"
 description = "🗓 Classes and functions with intuitive names for common dates operations"
 authors = ["Jorge Alvarado <alvaradosegurajorge@gmail.com>"]
 readme = "README.md"
@@ -19,6 +19,8 @@ flake8 = "^3.9.2"
 black = "^21.7b0"
 isort = "^5.9.3"
 coveralls = "^3.2.0"
+Sphinx = "^4.1.2"
+furo = "^2021.8.17-beta.43"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]

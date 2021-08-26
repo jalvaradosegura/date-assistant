@@ -4,6 +4,7 @@
 [![basic-quality-check](https://github.com/jalvaradosegura/date_assistant/actions/workflows/code_quality.yml/badge.svg)](https://github.com/jalvaradosegura/date_assistant/actions/workflows/code_quality.yml)
 [![GitHub license](https://img.shields.io/github/license/jalvaradosegura/date_assistant)](https://github.com/jalvaradosegura/date_assistant/blob/main/LICENSE)
 [![Downloads](https://pepy.tech/badge/date-assistant)](https://pepy.tech/project/date-assistant)
+[![Documentation Status](https://readthedocs.org/projects/date-assistant/badge/?version=latest)](https://date-assistant.readthedocs.io)
 
 # Date Assistant
 
