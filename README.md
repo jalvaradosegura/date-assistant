@@ -7,7 +7,7 @@
 [![Documentation Status](https://readthedocs.org/projects/date-assistant/badge/?version=latest)](https://date-assistant.readthedocs.io)
 
 # Date Assistant
-For more details take a look at the [docs](date-assistant.readthedocs.io) 
+For more details take a look at the [docs](https://date-assistant.readthedocs.io) 
 
 ## Installation
 date-assistant is published on [PyPI](https://pypi.org/project/date-assistant/) and can be installed from there:
