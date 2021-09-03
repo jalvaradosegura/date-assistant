@@ -11,3 +11,5 @@ MM_DD_YYYY = '%m-%d-%Y'
 MM_YYYY = '%m-%Y'
 # 2021-12
 YYYY_MM = '%Y-%m'
+# December 25, 2021
+MONTH_SPACE_DD_COMA_SPACE_YYYY = '%B %d, %Y'

@@ -2,7 +2,7 @@ from datetime import datetime
 
 from dateutil.relativedelta import relativedelta
 
-from date_assistant.formats import YYYY_MM_DD
+from date_assistant.date_formats import YYYY_MM_DD
 
 
 def get_days_diff_between(
@@ -66,3 +66,7 @@ def get_years_started_between(
 
 def cast_str_to_datetime(date: str, date_format: str) -> datetime:
     return datetime.strptime(date, date_format)
+
+
+def cast_datetime_to_str(date: datetime, output_format: str) -> str:
+    return date.strftime(output_format)

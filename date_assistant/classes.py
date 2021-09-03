@@ -1,6 +1,6 @@
 from dateutil.relativedelta import relativedelta
 
-from date_assistant.formats import YYYY_MM_DD
+from date_assistant.date_formats import YYYY_MM_DD
 from date_assistant.utils import cast_str_to_datetime
 
 
@@ -10,7 +10,7 @@ class DateAssistant:
         self._date = cast_str_to_datetime(date, YYYY_MM_DD)
 
     def __repr__(self):
-        return f'DateAssistant({self.date!r})'
+        return f"DateAssistant({self.date!r})"
 
     def __str__(self):
         return self.date

@@ -2,7 +2,7 @@ from date_assistant import __version__
 
 
 def test_version():
-    assert __version__ == '0.10.2'
+    assert __version__ == "0.11.0"
 
 
 def test_repr(example_date):
@@ -10,4 +10,4 @@ def test_repr(example_date):
 
 
 def test_str(example_date):
-    assert str(example_date) == '2021-01-01'
+    assert str(example_date) == "2021-01-01"

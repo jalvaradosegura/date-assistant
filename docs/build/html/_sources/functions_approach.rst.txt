@@ -260,4 +260,3 @@ See how we get a 1 as result. That's because a new year started between the date
 
 .. note::
    💡 This function allows the same parameters as the previous functions we saw. For example, you can indicate the format of the dates.
-

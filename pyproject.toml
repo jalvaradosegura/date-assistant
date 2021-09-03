@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "date_assistant"
-version = "0.10.2"
+version = "0.11.0"
 description = "🗓 Classes and functions with intuitive names for common dates operations"
 authors = ["Jorge Alvarado <alvaradosegurajorge@gmail.com>"]
 readme = "README.md"
@@ -11,6 +11,7 @@ repository = "https://github.com/jalvaradosegura/date-assistant"
 [tool.poetry.dependencies]
 python = "^3.8"
 python-dateutil = "^2.8.2"
+pre-commit = "^2.15.0"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
