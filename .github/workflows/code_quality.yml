@@ -2,21 +2,6 @@ name: basic-quality-check
 on: [push, pull_request]
 jobs:
 
-  unit-test:
-    name: Run Unit Tests
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - name: Install Poetry
-        run: |
-          pip install poetry
-      - name: Install dependencies
-        run: |
-          poetry install
-      - name: Execute pytest
-        run: |
-          poetry run python -m pytest
-
   code-quality:
     name: Code Quality Check
     runs-on: ubuntu-latest
