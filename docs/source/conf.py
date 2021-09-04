@@ -22,7 +22,7 @@ copyright = "2021, Jorge Alvarado Segura"
 author = "Jorge Alvarado Segura"
 
 # The full version, including alpha/beta/rc tags
-release = "0.11.0"
+release = "0.11.1"
 
 
 # -- General configuration ---------------------------------------------------
