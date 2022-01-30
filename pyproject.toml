@@ -24,6 +24,7 @@ furo = "^2021.8.17-beta.43"
 pre-commit = "^2.17.0"
 tox = "^3.24.5"
 mypy = "^0.931"
+tox-py = "^1.2.0"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
