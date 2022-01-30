@@ -75,9 +75,7 @@ def test_months_diff_with_using_non_default_date_format(
         ("2021-04-20", 3),
     ],
 )
-def test_months_started_since_and_until(
-    example_date, date_to_compare, expected_result
-):
+def test_months_started_since_and_until(example_date, date_to_compare, expected_result):
     response_since = example_date.months_started_since(date_to_compare)
     response_until = example_date.months_started_until(date_to_compare)
 
@@ -98,12 +96,8 @@ def test_months_started_since_and_until(
 def test_months_started_since_and_until_using_non_default_date_format(
     example_date, date_to_compare, expected_result, date_format
 ):
-    response_since = example_date.months_started_since(
-        date_to_compare, date_format
-    )
-    response_until = example_date.months_started_until(
-        date_to_compare, date_format
-    )
+    response_since = example_date.months_started_since(date_to_compare, date_format)
+    response_until = example_date.months_started_until(date_to_compare, date_format)
 
     assert response_since == expected_result
     assert response_until == expected_result

@@ -96,12 +96,8 @@ def test_years_started_since(example_date, date_to_compare, expected_result):
 def test_years_started_since_using_non_default_date_format(
     example_date, date_to_compare, expected_result, date_format
 ):
-    response_since = example_date.years_started_since(
-        date_to_compare, date_format
-    )
-    response_until = example_date.years_started_until(
-        date_to_compare, date_format
-    )
+    response_since = example_date.years_started_since(date_to_compare, date_format)
+    response_until = example_date.years_started_until(date_to_compare, date_format)
 
     assert response_since == expected_result
     assert response_until == expected_result

@@ -1,4 +1,4 @@
-from dateutil.relativedelta import relativedelta
+from dateutil.relativedelta import relativedelta  # type: ignore
 
 from date_assistant.date_formats import YYYY_MM_DD
 from date_assistant.utils import cast_str_to_datetime
@@ -23,12 +23,10 @@ class DateAssistant:
     def days_diff_with(
         self, date_to_compare: str, date_format: str = YYYY_MM_DD
     ) -> int:
-        date_to_compare = cast_str_to_datetime(date_to_compare, date_format)
-        return abs(self._date - date_to_compare).days
+        date_to_compare_as_datetime = cast_str_to_datetime(date_to_compare, date_format)
+        return abs(self._date - date_to_compare_as_datetime).days
 
-    def add_months(
-        self, num_months: int, date_format: str = YYYY_MM_DD
-    ) -> str:
+    def add_months(self, num_months: int, date_format: str = YYYY_MM_DD) -> str:
         self._date += relativedelta(months=num_months)
         self.date = self._date.strftime(date_format)
         return self.date
@@ -36,16 +34,18 @@ class DateAssistant:
     def months_diff_with(
         self, date_to_compare: str, date_format: str = YYYY_MM_DD
     ) -> int:
-        date_to_compare = cast_str_to_datetime(date_to_compare, date_format)
-        diff = relativedelta(self._date, date_to_compare)
+        date_to_compare_as_datetime = cast_str_to_datetime(date_to_compare, date_format)
+        diff = relativedelta(self._date, date_to_compare_as_datetime)
         return abs(diff.months + (12 * diff.years))
 
     def months_started_since(
         self, date_to_compare: str, date_format: str = YYYY_MM_DD
     ) -> int:
-        date_to_compare = cast_str_to_datetime(date_to_compare, date_format)
-        months_diff = self._date.month - date_to_compare.month
-        return abs((self._date.year - date_to_compare.year) * 12 + months_diff)
+        date_to_compare_as_datetime = cast_str_to_datetime(date_to_compare, date_format)
+        months_diff = self._date.month - date_to_compare_as_datetime.month
+        return abs(
+            (self._date.year - date_to_compare_as_datetime.year) * 12 + months_diff
+        )
 
     def months_started_until(
         self, date_to_compare: str, date_format: str = YYYY_MM_DD
@@ -60,15 +60,15 @@ class DateAssistant:
     def years_diff_with(
         self, date_to_compare: str, date_format: str = YYYY_MM_DD
     ) -> int:
-        date_to_compare = cast_str_to_datetime(date_to_compare, date_format)
-        diff = relativedelta(self._date, date_to_compare)
+        date_to_compare_as_datetime = cast_str_to_datetime(date_to_compare, date_format)
+        diff = relativedelta(self._date, date_to_compare_as_datetime)
         return abs(diff.years)
 
     def years_started_since(
         self, date_to_compare: str, date_format: str = YYYY_MM_DD
     ) -> int:
-        date_to_compare = cast_str_to_datetime(date_to_compare, date_format)
-        years_diff = self._date.year - date_to_compare.year
+        date_to_compare_as_datetime = cast_str_to_datetime(date_to_compare, date_format)
+        years_diff = self._date.year - date_to_compare_as_datetime.year
         return abs(years_diff)
 
     def years_started_until(

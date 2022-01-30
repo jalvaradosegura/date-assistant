@@ -43,11 +43,7 @@ def test_cast_str_to_datetime(date, date_format, expected_result):
         (datetime(2000, 2, 14), DD_MM_YYYY, "14-02-2000"),
         (datetime(2015, 8, 10), DD_MM_YYYY, "10-08-2015"),
         (datetime(1994, 12, 1), MM_YYYY, "12-1994"),
-        (
-            datetime(1994, 12, 1),
-            MONTH_SPACE_DD_COMA_SPACE_YYYY,
-            "December 01, 1994",
-        ),
+        (datetime(1994, 12, 1), MONTH_SPACE_DD_COMA_SPACE_YYYY, "December 01, 1994"),
     ],
 )
 def test_cast_datetime_to_str(date, date_format, expected_result):
@@ -85,9 +81,7 @@ def test_get_days_diff_between(
 def test_get_months_diff_between(
     date1, date2, date1_format, date2_format, expected_result
 ):
-    response = get_months_diff_between(
-        date1, date2, date1_format, date2_format
-    )
+    response = get_months_diff_between(date1, date2, date1_format, date2_format)
     assert response == expected_result
 
 
@@ -104,9 +98,7 @@ def test_get_months_diff_between(
 def test_get_months_started_between(
     date1, date2, date1_format, date2_format, expected_result
 ):
-    response = get_months_started_between(
-        date1, date2, date1_format, date2_format
-    )
+    response = get_months_started_between(date1, date2, date1_format, date2_format)
     assert response == expected_result
 
 
@@ -140,7 +132,5 @@ def test_get_years_diff_between(
 def test_get_years_started_between(
     date1, date2, date1_format, date2_format, expected_result
 ):
-    response = get_years_started_between(
-        date1, date2, date1_format, date2_format
-    )
+    response = get_years_started_between(date1, date2, date1_format, date2_format)
     assert response == expected_result
