@@ -1,3 +1,9 @@
+⚠️ I recommend using [date-operations](https://github.com/jalvaradosegura/date-operations) instead of this library. It is more concise and can automatically infer the format of dates:
+
+```
+pip install date-operations
+```
+
 <p align="center">
 
   <a href="https://github.com/jalvaradosegura/date-assistant/actions?query=workflow%3ATests" target="_blank">
